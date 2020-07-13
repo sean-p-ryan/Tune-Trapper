@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Recorder from './Recorder';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid container
+      direction="column"
+      justify="center"
+      alignItems="center">
+        <AppBar>
+          <Typography style={{textAlign: 'center'}} variant="h6">Welcome to Tune Trapper</Typography>
+        </AppBar>
+      <img style={{width: '20%', height: '20%', marginTop: '5%'}} src={require('./images/microphone.png')}></img>
+      < Recorder />
+    </Grid>
   );
 }
 
