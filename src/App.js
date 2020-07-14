@@ -3,17 +3,19 @@ import Recorder from './Recorder';
 import AppBar from '@material-ui/core/AppBar';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import './App.css';
 
 function App() {
-  return (
+  return (    
     <Grid container
       direction="column"
       justify="center"
-      alignItems="center">
-        <AppBar>
-          <Typography style={{textAlign: 'center'}} variant="h6">Welcome to Tune Trapper</Typography>
+      alignItems="center"
+      className="container">
+        <AppBar className="app-bar">
+          <Typography style={{textAlign: 'center'}} variant="h6"><div className="logo">TuneTrapper</div></Typography>
         </AppBar>
-      <img style={{width: '20%', height: '20%', marginTop: '5%'}} src={require('./images/microphone.png')}></img>
+      {/* <img style={{width: '20%', height: '20%', marginTop: '5%'}} src={require('./images/microphone.png')}></img> */}
       < Recorder />
     </Grid>
   );

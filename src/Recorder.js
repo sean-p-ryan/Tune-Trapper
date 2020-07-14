@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Recording from './Recording';
+import RecordButton from './RecordButton';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
@@ -54,10 +56,9 @@ export default function WebAudioTest() {
             justify="center"
             alignItems="center"
         >
-            <img style={{ cursor: 'pointer', marginTop: '10px' }} onClick={isRecording ? stopRecording : startRecording} src={isRecording ? require('./images/stop_icon.png') : require('./images/record_icon.png')}></img>
-            <Typography style={{margin: '1rem'}}>{isRecording ? `Press to stop recording ` : `Press to start recording`}</Typography>
+            <RecordButton isRecording={isRecording} startRecording={startRecording} stopRecording={stopRecording} className="record-button" />          
             {recordings.map(recording =>
-                <audio style={{ marginBottom: '5px' }} src={recording.url} controls='true'></audio>
+                <Recording url={recording.url} />
             )}
         </Grid>
     )

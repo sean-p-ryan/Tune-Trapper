@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.15rem;
+}
+
+.container {
+    background: #5a4c5a;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app-bar {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.record-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 1px solid #5a4c5a;
+    position: relative;
+    cursor: pointer;
+}
+
+.inner-shape-not-recording {
+    width: 96%;
+    height: 96%;
+    background: red;
+    border-radius: 50%;
+    top: 2%;
+    left: 2%;
+    position: absolute;
+}
+
+.inner-shape-recording {
+    width: 40%;
+    height: 40%;
+    background: red;
+    border-radius: 5%;
+    top: 30%;
+    position: absolute;
+    transition: top 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+}
+
+.recording-container {
+    position: fixed;
+    bottom: 0;
+}
